@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-engine = create_engine("sqlite:///mantiq.db", echo=False)
+from app.config import settings
+
+engine = create_engine(settings.database_url, echo=False)
 Base = declarative_base()
 
 SessionLocal = sessionmaker(bind=engine)
