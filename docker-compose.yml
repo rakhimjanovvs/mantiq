@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: mantiq_db
+    environment:
+      POSTGRES_USER: mantiq
+      POSTGRES_PASSWORD: mantiq_password
+      POSTGRES_DB: mantiq
+    ports:
+      - "5435:5432"
+    volumes:
+      - mantiq_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  mantiq_postgres_data:

@@ -3,11 +3,13 @@
 API для платформы обучения программированию.
 
 ## Стек
-FastAPI, SQLAlchemy 2.0, Pydantic, SQLite
+FastAPI, SQLAlchemy 2.0, Pydantic, PostgreSQL
 
 ## Запуск
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+1. cp .env.example .env
+2. docker compose up -d
+3. pip install -r requirements.txt
+4. uvicorn app.main:app --reload
 
 ## Возможности
 - CRUD курсов и уроков
