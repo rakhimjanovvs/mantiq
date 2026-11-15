@@ -23,5 +23,6 @@ class Lesson(Base):
     title: Mapped[str] = mapped_column(String(100))
     content: Mapped[str] = mapped_column(Text)
     course_id: Mapped[int] = mapped_column(ForeignKey("courses.id"))
+    video_url: Mapped[str] = mapped_column(String(500))
 
     course: Mapped["Course"] = relationship(back_populates="lessons")

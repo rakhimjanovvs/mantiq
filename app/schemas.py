@@ -36,6 +36,7 @@ class CourseRead(BaseModel):
 class LessonCreate(BaseModel):
     title: Title
     content: Content
+    video_url: str
 
 
 class LessonRead(BaseModel):
@@ -45,6 +46,7 @@ class LessonRead(BaseModel):
     title: str
     content: str
     course_id: int
+    video_url: str
 
 T = TypeVar("T")
 

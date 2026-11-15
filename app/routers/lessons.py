@@ -26,7 +26,7 @@ def create_lesson(course_id: int, lesson_data: LessonCreate, db: Session = Depen
             detail="Урок с таким названием уже существует!"
         )
 
-    new_lesson = Lesson(title=lesson_data.title, content=lesson_data.content, course_id=course_id)
+    new_lesson = Lesson(title=lesson_data.title, content=lesson_data.content, course_id=course_id, video_url=lesson_data.video_url)
     db.add(new_lesson)
     db.commit()
     db.refresh(new_lesson)
